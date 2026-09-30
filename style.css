@@ -1,0 +1,845 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    height: 70px;
+    background: #1976d2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 45px;
+
+    color: white;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+nav button {
+    border: none;
+    background: transparent;
+    color: white;
+
+    padding: 10px 14px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    border-radius: 7px;
+
+    transition: 0.3s;
+}
+
+
+nav button:hover {
+    background: rgba(255,255,255,0.18);
+}
+
+
+/* ================= NAV SEARCH ================= */
+
+.search-nav {
+    display: flex;
+
+    background: white;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    margin-right: 8px;
+}
+
+
+.search-nav input {
+    width: 210px;
+
+    padding: 10px 15px;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+.search-nav button {
+    color: #1976d2;
+
+    background: white;
+
+    border-radius: 0;
+
+    padding: 8px 14px;
+}
+
+
+/* ================= HOME HERO ================= */
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 70px 9%;
+
+    background:
+        linear-gradient(
+            120deg,
+            #e3f2fd,
+            #ffffff,
+            #fff3e0
+        );
+
+    overflow: hidden;
+}
+
+
+.hero-content {
+    max-width: 650px;
+
+    animation: slideLeft 0.9s ease;
+}
+
+
+.welcome {
+    color: #1976d2;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h1 {
+    font-size: 58px;
+
+    line-height: 1.08;
+
+    margin-bottom: 25px;
+
+    color: #17202a;
+}
+
+
+.hero h1 span {
+    color: #1976d2;
+}
+
+
+.hero-text {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #666;
+
+    max-width: 580px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================= HERO SEARCH ================= */
+
+.hero-search {
+    width: 560px;
+
+    height: 58px;
+
+    display: flex;
+
+    background: white;
+
+    border-radius: 35px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+
+    margin-bottom: 22px;
+}
+
+
+.hero-search input {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 0 25px;
+
+    font-size: 16px;
+}
+
+
+.hero-search button {
+    border: none;
+
+    background: #1976d2;
+
+    color: white;
+
+    padding: 0 28px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.hero-search button:hover {
+    background: #125aa3;
+}
+
+
+/* ================= EXPLORE BUTTON ================= */
+
+.explore-btn {
+    border: none;
+
+    background: #17202a;
+
+    color: white;
+
+    padding: 15px 27px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.explore-btn:hover {
+    background: #1976d2;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================= HERO FOOD ================= */
+
+.hero-food {
+    width: 440px;
+    height: 440px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    animation: float 4s ease-in-out infinite;
+}
+
+
+.food-circle {
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 180px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.15);
+}
+
+
+.floating-food {
+    position: absolute;
+
+    width: 75px;
+    height: 75px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+.food1 {
+    top: 20px;
+    right: 30px;
+}
+
+
+.food2 {
+    bottom: 30px;
+    left: 15px;
+}
+
+
+.food3 {
+    bottom: 65px;
+    right: 0;
+}
+
+
+/* ================= CATEGORIES ================= */
+
+.categories {
+    text-align: center;
+
+    padding: 65px 7%;
+
+    background: white;
+}
+
+
+.categories h2 {
+    font-size: 34px;
+
+    margin-bottom: 10px;
+}
+
+
+.categories > p {
+    color: #777;
+
+    margin-bottom: 35px;
+}
+
+
+.category-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+.category {
+    width: 170px;
+
+    padding: 25px 15px;
+
+    border-radius: 15px;
+
+    background: #f5f7fb;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.category div {
+    font-size: 50px;
+
+    margin-bottom: 12px;
+}
+
+
+.category h3 {
+    color: #333;
+}
+
+
+.category:hover {
+    transform: translateY(-8px);
+
+    background: #e3f2fd;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+/* ================= PAGE ================= */
+
+#recipesPage,
+#cartPage {
+    display: none;
+
+    padding: 40px 5%;
+}
+
+
+.container {
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: auto;
+}
+
+
+.page-title {
+    margin-bottom: 30px;
+}
+
+
+.page-title h1 {
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+
+.page-title p {
+    color: #777;
+}
+
+
+/* ================= RECIPE GRID ================= */
+
+#recipes {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 28px;
+
+    width: 100%;
+}
+
+
+.recipe {
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+
+.recipe:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 12px 25px rgba(0,0,0,0.16);
+}
+
+
+/* DESKTOP IMAGE */
+
+.recipe img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.recipe-info {
+    padding: 18px;
+}
+
+
+.recipe-info h2 {
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+
+.recipe-info p {
+    color: #666;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+}
+
+
+.cart-btn {
+    width: 100%;
+
+    border: none;
+
+    background: #1976d2;
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 7px;
+
+    margin-top: 12px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+.cart-btn:hover {
+    background: #125aa3;
+}
+
+
+/* ================= CART ================= */
+
+.cart-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background: white;
+
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+.cart-item img {
+    width: 160px;
+
+    height: 120px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+.cart-details {
+    flex: 1;
+}
+
+
+.cart-details h2 {
+    margin-bottom: 8px;
+}
+
+
+.cart-details p {
+    color: #777;
+
+    margin-bottom: 15px;
+}
+
+
+.quantity {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 12px;
+}
+
+
+.quantity button {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #1976d2;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+.quantity span {
+    font-weight: bold;
+
+    font-size: 18px;
+}
+
+
+.remove-btn {
+    border: none;
+
+    background: #e53935;
+
+    color: white;
+
+    padding: 8px 15px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+
+/* ================= EMPTY CART ================= */
+
+.empty-cart {
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background: white;
+
+    border-radius: 15px;
+}
+
+
+.empty-cart h2 {
+    margin-bottom: 10px;
+}
+
+
+.empty-cart p {
+    color: #777;
+
+    margin-bottom: 20px;
+}
+
+
+.empty-cart button {
+    border: none;
+
+    background: #1976d2;
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+
+/* ================= LOADING ================= */
+
+.loading,
+.error,
+.no-results {
+    text-align: center;
+
+    padding: 70px;
+
+    grid-column: 1 / -1;
+}
+
+
+.loading h2 {
+    color: #1976d2;
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes slideLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1100px) {
+
+    #recipes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-food {
+        width: 350px;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    header {
+        height: auto;
+
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 50px 20px;
+    }
+
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+
+    .hero-search {
+        width: 100%;
+    }
+
+
+    .hero-food {
+        margin-top: 50px;
+
+        width: 300px;
+        height: 300px;
+    }
+
+
+    .food-circle {
+        width: 240px;
+        height: 240px;
+
+        font-size: 120px;
+    }
+
+
+    #recipes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    #recipes {
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+
+    .search-nav input {
+        width: 150px;
+    }
+
+
+    .cart-item {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
